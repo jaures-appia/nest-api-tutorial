@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  nest-tuto-api-db:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=nest
+    ports:
+      - '5434:5434'
+    networks: 
+      - izo
+networks:
+    izo:
